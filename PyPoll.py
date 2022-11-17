@@ -52,9 +52,9 @@ for candidate_name  in candidate_votes:
     # 2. Retrieve vote count of a candidate.
     votes = candidate_votes[candidate_name]
     # 3. Calculate the percentage of votes.
-    vote_percentage = round(float(votes) / float(total_votes) * 100, 2)
+    vote_percentage = float(votes) / (total_votes) * 100
     # 4. Print the candidate name and percentage of votes.
-    print(f"{candidate_name}: received {vote_percentage}% of the vote.")
+    print(f"{candidate_name}: received {vote_percentage:0.1f}% of the vote.")
 
 
 # Print the candidate vote dictionary.
