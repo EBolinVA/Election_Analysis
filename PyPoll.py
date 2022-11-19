@@ -54,6 +54,16 @@ with open(file_to_load) as election_data:
 
 # Save the results to our text file
 with open(file_to_save, "w") as txt_file:
+    # After opening the file print the final vote count to the terminal.
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+    print(election_results, end="")
+    # After printing the final vote count to the termianl save the final vote count to the text file.
+    txt_file.write(election_results)
+
     # Determine the percentage of votes for each candidate by looping through the counts.
     # Iterate through the candidate list.
     for candidate_name  in candidate_votes:
@@ -61,8 +71,14 @@ with open(file_to_save, "w") as txt_file:
         votes = candidate_votes[candidate_name]
         # Calculate the percentage of votes.
         vote_percentage = float(votes) / (total_votes) * 100
-        # Print the candidate name, their voter count, and percentage of votes.
-        # print(f"{candidate_name}: {vote_percentage:0.1f}% ({votes:,})\n")
+        # Save to a variable- the candidate name, their voter count, and percentage of votes.
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:0.1f}% ({votes:,})\n")
+
+        # Print each candidate, their voter count, and percentage to the terminal.
+        print(candidate_results)
+        # Save the candidate results to our text file.
+        txt_file.write(candidate_results)
 
         # Determine winning vote count, winning percentage, and candidate
         # Determine if the votes are greater than the winning count.
@@ -73,32 +89,17 @@ with open(file_to_save, "w") as txt_file:
             winning_percentage = vote_percentage
             # And set the winning_candidate equal to the candidate's name.
             winning_candidate = candidate_name
+            
+    # Print the winning candidate's results to the terminal.
+    winning_candidate_summary = (
+        f"________________________________\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"_________________________________\n")
+    print(winning_candidate_summary)
 
-# Print the final vote count to the terminal.
-    election_results = (
-        f"\nElection Results\n"
-        f"-------------------------\n"
-        f"Total Votes: {total_votes:,}\n"
-        f"-------------------------\n")
-
-    print(election_results, end="")
+    # Save the winning candidate's name to the text file.
+    txt_file.write(winning_candidate_summary)
     
-    # Save the final vote count to the text file.
-    txt_file.write(election_results)
-
-# Print out each candidate's name, vote count, 
-# and percentage of votes to the terminal.
-
-winning_candidate_summary = (
-    f"________________________________\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}%\n"
-    f"_________________________________\n")
-    # print(winning_candidate_summary)
     
-
-
-
-
-
