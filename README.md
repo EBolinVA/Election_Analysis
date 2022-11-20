@@ -45,14 +45,14 @@ The analyses of the election show that:
 
 ## Election Audit Summary
   This audit of the results from mail-in ballots, punch cards, and DRE counting machines for a U.S. congressional precinct in Colorado was performed successfully with Python. This audit could have been completed using Excel, but by automating the process using Python, we are able to apply the Python script to audit other elections, including senatorial and local elections. The changes to the script for future election audits should include the following: 
-  - Reading the correct .csv input file for the district in line 9.
+  - Read the correct .csv input file for the district in line 9.
 
   ![image of code reading .csv file](04load_election_results_csv_file.png)
 
-  - Adjusting the variables in line 51 from "county" to "district" or "state", as needed for areas of other elections being audited.
+  - Adjust the variables in line 51 from "county" to "district" or "state", as needed for areas of other elections being audited.
 
   ![image of code naming county variable](05code_county_variable.png)
-  - Adjusting the Election Results print out in line 88 to reflect geography (county, district, or state)
+  - Adjust the Election Results print out in line 88 to reflect geography (county, district, or state)
 
   ![image of code printing election_results](06write_results_change_geography.png)
   
