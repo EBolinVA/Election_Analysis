@@ -17,13 +17,16 @@ A Colorado Board of Elections employee outlined the following tasks to complete 
 - Data Source: election_results.csv
 - Software: Python 3.9.13, Visual Studio Code 1.72.2
 
-## Summary
+## Election Audit Results
 The analyses of the election show that:
 - There were 369,711 votes cast in the election.
+![image of code setting total_votes variable]()
+![image of code calculating total_votes in for loop]
 - Congressional vote totals by county:
   - Jefferson: 10.5% (38,855)
   - Denver: 82.8% (306,055)
   - Arapahoe: 6.7% (24,801)
+![image of code calculating county summary]()
 - The candidates were:
   - Charles Casper Stockham
   - Diana DeGette
@@ -35,6 +38,12 @@ The analyses of the election show that:
 - The winner of the election was:
   - Diana DeGette, who received 73.8% of the vote and 272,892 votes.
   
-  ## Challenge Overview
+  ## Election Audit Summary
+  This audit of the results from mail-in ballots, punch cards, and DRE counting machines for a U.S. congressional precinct in Colorado was performed successfully with Python. This audit could have been completed using Excel, but by automating the process using Python, we are able to apply the Python script to audit other elections, including senatorial and local elections. The changes to the script for other election audits should include the following: 
+  - Reading the correct .csv input file for the district
+  ![image of code reading .csv file]
+  - Adjusting the variables from "county" to "district" or "state", as needed for areas of other elections being audited.
+  ![image of code naming county variable]
+  - Adjusting the Election Results print out to reflect geography (county, district, or state)
+  ![image of code printing election_results]
   
-  ## Challenge Summary
