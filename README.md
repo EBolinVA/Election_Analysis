@@ -20,7 +20,7 @@ A Colorado Board of Elections employee outlined the following tasks to complete 
 ## Election Audit Results
 The analyses of the election show that:
 - There were 369,711 votes cast in the election.
-  - Below is the refactorable code which begins by setting a variable for total vote count.
+  - Below is the refactorable code which begins by setting a ```total_votes``` as a variable.
 ![image of code setting total_votes variable](01calculate_total_vote_count.png)
 
 
