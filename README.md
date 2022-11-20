@@ -1,4 +1,4 @@
-# Election_Analysis
+# Colorado Congressional Precinct Election Analysis
 
 ## Project Overview
 A Colorado Board of Elections employee outlined the following tasks to complete the election audit of a recent local congressional election.
@@ -27,15 +27,15 @@ The analyses of the election show that:
   - Denver: 82.8% (306,055)
   - Arapahoe: 6.7% (24,801)
 ![image of code calculating county summary]()
-- The candidates were:
+- The candidates:
   - Charles Casper Stockham
   - Diana DeGette
   - Raymon Anthony Doane
-- The candidate results were:
+- The candidate results:
   - Charles Casper Stockham received 23.0% of the votes and 85,213 votes.
   - Diana DeGette received 73.8% of the votes and 272,892 votes.
   - Raymon Anthony Doane received 3.1% of the votes and 11,606 votes.
-- The winner of the election was:
+- The winner of the election:
   - Diana DeGette, who received 73.8% of the vote and 272,892 votes.
   
   ## Election Audit Summary
