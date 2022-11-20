@@ -20,13 +20,17 @@ A Colorado Board of Elections employee outlined the following tasks to complete 
 ## Election Audit Results
 The analyses of the election show that:
 - There were 369,711 votes cast in the election.
-![image of code setting total_votes variable]()
-![image of code calculating total_votes in for loop]
+  - Below is the refactorable code which begins by setting a variable for total vote count.
+![image of code setting total_votes variable](01calculate_total_vote_count.png)
+
+
 - Congressional vote totals by county:
   - Jefferson: 10.5% (38,855)
   - Denver: 82.8% (306,055)
   - Arapahoe: 6.7% (24,801)
-![image of code calculating county summary]()
+    - Below is the code for determining vote count per county along with percentage of total votes in the election. A dictionary ```county_votes``` was created to hold ```county_name``` ask key and ```votes``` as value. 
+![image of code calculating county summary](03calculate_county_summary.png)
+
 - The candidates:
   - Charles Casper Stockham
   - Diana DeGette
@@ -38,12 +42,17 @@ The analyses of the election show that:
 - The winner of the election:
   - Diana DeGette, who received 73.8% of the vote and 272,892 votes.
   
-  ## Election Audit Summary
-  This audit of the results from mail-in ballots, punch cards, and DRE counting machines for a U.S. congressional precinct in Colorado was performed successfully with Python. This audit could have been completed using Excel, but by automating the process using Python, we are able to apply the Python script to audit other elections, including senatorial and local elections. The changes to the script for other election audits should include the following: 
-  - Reading the correct .csv input file for the district
-  ![image of code reading .csv file]
-  - Adjusting the variables from "county" to "district" or "state", as needed for areas of other elections being audited.
-  ![image of code naming county variable]
-  - Adjusting the Election Results print out to reflect geography (county, district, or state)
-  ![image of code printing election_results]
+
+## Election Audit Summary
+  This audit of the results from mail-in ballots, punch cards, and DRE counting machines for a U.S. congressional precinct in Colorado was performed successfully with Python. This audit could have been completed using Excel, but by automating the process using Python, we are able to apply the Python script to audit other elections, including senatorial and local elections. The changes to the script for future election audits should include the following: 
+  - Reading the correct .csv input file for the district in line 9.
+
+  ![image of code reading .csv file](04load_election_results_csv_file.png)
+
+  - Adjusting the variables in line 51 from "county" to "district" or "state", as needed for areas of other elections being audited.
+
+  ![image of code naming county variable](05code_county_variable.png)
+  - Adjusting the Election Results print out in line 88 to reflect geography (county, district, or state)
+
+  ![image of code printing election_results](06write_results_change_geography.png)
   
